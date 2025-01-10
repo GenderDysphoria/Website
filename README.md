@@ -21,7 +21,7 @@ The beginning of each markdown file contains a [YAML](https://yaml.org/) formatt
 - `title`: This is the title of the page as it appears in the browser titlebar and when embedded on social media.
 - `description`: This is the description of the page that appears when linked on social media.
 - `preBody`: This defines the file to use for the block of text that appears at the top of each page in the GDB.
-- siblings`: This controls the navigation links that appear at the bottom of each page.
+- `siblings`: This controls the navigation links that appear at the bottom of each page.
 - `classes`: These are the css classes to apply to the page body for styling the page.
 - `tweets`: This is a list of twitter urls or tweet ids that are embedded on the page. This is necessary for the engine to gather those tweets during the pre-render process so that they are available for embedding.
 
