@@ -1,0 +1,34 @@
+{
+  "output": "public/tw/printable.md",
+  "sources": [
+    "public/tw/index.md",
+    "public/tw/what-is-gender.md",
+    "public/tw/history.md",
+    "public/tw/euphoria.md",
+    "public/tw/physical-dysphoria.md",
+    "public/tw/biochemical-dysphoria.md",
+    "public/tw/social-dysphoria.md",
+    "public/tw/societal-dysphoria.md",
+    "public/tw/sexual-dysphoria.md",
+    "public/tw/presentational-dysphoria.md",
+    "public/tw/existential-dysphoria.md",
+    "public/tw/managed-dysphoria.md",
+    "public/tw/impostor-syndrome.md",
+    "public/tw/am-i-trans.md",
+    "public/tw/diagnoses.md",
+    "public/tw/treatment.md",
+    "public/tw/causes.md",
+    "public/tw/chromosomes.md",
+    "public/tw/hormones.md",
+    "public/tw/second-puberty-masc.md",
+    "public/tw/second-puberty-fem.md",
+    "public/tw/conclusion.md"
+  ],
+  "meta": {
+    "title": "性別不安聖經 - The Gender Dysphoria Bible",
+    "lang": "tw",
+    "description": "深入探討性別不安的各種表現形式，以及身為跨性別者的意義。",
+    "classes": [ "gdb", "longform" ],
+    "preBody": "_disclaimer"
+  }
+}
