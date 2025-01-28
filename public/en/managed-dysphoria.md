@@ -83,3 +83,5 @@ Finally, another very common coping mechanism is to find means of escape or ment
 - Obsessively cleaning one's living space.
 
 - Sleeping. Lots and lots of sleeping.
+
+- Drug and alcohol use.
