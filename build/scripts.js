@@ -19,7 +19,7 @@ module.exports = exports = async function scripts (prod) {
   const globalScript = new ClientScript('js/global.js');
   await globalScript.concat(globalFiles, prod);
 
-  const files = await Promise.map(glob('js/*.{js,jsx}', { cwd: ROOT, nodir: true }), async (filepath) => {
+  const files = await Promise.map(glob('js/**/*.{js,jsx}', { cwd: ROOT, nodir: false }), async (filepath) => {
     const f = new ClientScript(filepath);
     if (f.preprocessed) return false;
 

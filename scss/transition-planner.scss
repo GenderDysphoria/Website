@@ -1,0 +1,270 @@
+$color_1: #333333;
+$color_2: #aaa;
+$color_3: black;
+$color_4: red;
+$color_5: purple;
+$color_6: white;
+$font-family_1: Arial, sans-serif;
+$background-color_1: white;
+$background-color_2: #EEEEEE;
+$background-color_3: rgb(0,0,0);
+$background-color_4: rgba(0,0,0,0.4);
+$background-color_5: #fefefe;
+$primary: #fc0a7e;
+
+.icon-image {
+	width: 100px
+}
+
+.onHoverText {
+	text-decoration: underline;
+}
+.chart {
+	font-family: $font-family_1;
+	font-size: 12px;
+}
+input[type="file"] {
+	display: none;
+}
+.custom-file-upload {
+	font: bold 11px Arial;
+	text-decoration: none;
+	background-color: $background-color_2;
+	color: $color_1;
+	padding: 2px 6px 2px 6px;
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	border-left: 1px solid #CCCCCC;
+	cursor: pointer;
+}
+.axis {
+	path {
+		fill: none;
+		stroke: #000;
+		shape-rendering: crispEdges;
+	}
+	line {
+		fill: none;
+		stroke: #000;
+		shape-rendering: crispEdges;
+	}
+}
+.bar-onset-mtf {
+	fill: #c062ff;
+}
+.bar-onset-ftm {
+	fill: #c062ff;
+}
+.bar-in-progress {
+	fill: #00a292;
+}
+.bar-max-effect-mtf {
+	fill: #FF69B4;
+}
+.bar-before-ftm {
+	fill: #FF69B4;
+}
+.bar-needs-scheduling {
+	fill: #CC0000;
+}
+.bar-variable {
+	fill: #c1c400;
+}
+.bar-done {
+	fill: #858585;
+}
+.bar-scheduled {
+	fill: #669900;
+}
+.bar-tbd {
+	fill: #ff9900;
+}
+.bar-before-mtf {
+	fill: #20c4ff;
+}
+.bar-max-effect-ftm {
+	fill: #20c4ff;
+}
+
+
+.pink-btn {
+    font-size: 0.9em;
+    box-shadow: 0px 1px 5px rgba(#000, 0.5);
+    color: white;
+    white-space: nowrap;
+    width: 100%;
+    // min-width: 75%;
+    height: 36px;
+    max-width: calc(50vw - 10px);
+	background-color: #fc0a7e;
+  }
+
+  .pink-btn.left {
+    justify-content: flex-start;
+  }
+
+  .pink-btn:hover {
+	background-color: #E81179;
+  }
+
+  .transfem-color:hover {
+	background-color: #E81179;
+  }
+
+  .transmasc-color:hover {
+	background-color:  #004aba;
+  }
+
+  .trans-mixed-color:hover {
+	background-color: #7f00b6;
+  }
+
+.full-width {
+	width: 100%
+}
+
+.trans-planner-label {
+	text-align: center;
+	border-radius: 5%;
+	font-size: 0.9em;
+    box-shadow: 0px 1px 5px rgba(#000, 0.5);
+    color: white;
+    white-space: nowrap;
+	line-height: 36px;
+    height: 36px;
+    max-width: calc(50vw - 10px);
+	padding: 0px 5px;
+}
+
+.transfem-color {
+	background-color: #fc0a7e;
+}
+
+.transmasc-color {
+	background-color: #0a6bfc;
+}
+
+.trans-mixed-color {
+	background-color: #ab04f3;
+}
+
+.mtf-modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: $background-color_3;
+	background-color: $background-color_4;
+}
+.mtf-modal-content {
+	background-color: $background-color_5;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+.ftm-modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: $background-color_3;
+	background-color: $background-color_4;
+}
+.ftm-modal-content {
+	background-color: $background-color_5;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+.edit-plan-modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: $background-color_3;
+	background-color: $background-color_4;
+}
+.edit-plan-modal-content {
+	background-color: $background-color_5;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+.close {
+	color: $color_2;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	&:hover {
+		color: $color_3;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	&:focus {
+		color: $color_3;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+  }
+
+.text-with-margins {
+	margin-left: 10%;
+	margin-right: 10%
+}
+
+p {
+	font-size: 12px;
+}
+
+button {
+	font-size: 15px;
+}
+
+.button {
+	font-size: 15px;
+}
+
+.grey-body {
+	background-color: #f0f0f0;
+}
+
+.white-section {
+	@media screen and (min-width: 800px) {
+		margin-right: 200px;
+		margin-left: 10px;
+  
+		@media (max-width: 1000px) {
+		  margin-right: 100px;
+		}
+	  }
+
+	background-color: #ffffff;
+}
+
+.th-bold {
+	font-weight: bold;
+	font-size: 20px;
+}

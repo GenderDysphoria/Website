@@ -21,6 +21,10 @@ This is a compilation of reported medical transition changes collected from test
 
 **Note that this is a list of _possible_ changes. There is no guarantee that every person on feminizing HRT will experience all of these. Your age, genetics, medical history, degree of masculinization from natal puberty, and hormone regimen can all have impacts on results. There is also just a degree of randomness — every body is different — and some things can take years to appear.**
 
+{!{ <div class="gutter">
+{{import '~/github-tweet-lookalike' githubLink="swarmidentity" githubUser="swarmidentity" githubUserImageLink="https://avatars.githubusercontent.com/u/82755646?s=40&v=4" linkToDisplay='/transition-planner.html' introText="I built this " linkText="Transition Planning Calendar" outroText=" for myself, adding it as a beta page to the Dysphoria Bible. Contributions welcome!"}}
+</div> }!}
+
 ### Breast Growth
 
 Despite public perceptions, the majority of transfems do not pursue breast augmentation, as it often isn't necessary (and, for many, is not within reach). Every human is born with breast tissue, it simply remains inactive without estrogen to make it grow. Development typically takes 2-5 years, but can continue for more than ten years, just as it does for cisgender women.
@@ -266,3 +270,4 @@ No, there have not yet been studies on this yet, but it is reported by far, **fa
 Running on estrogen and progesterone activates a gene sequence which instructs the hypothalamus to attempt to cycle ovary and uterine behavior just as it does in female-assigned individuals, regardless of the absence of ovaries or a uterus. This cycle affects numerous organs and subsystems in the body, causing the release of a variety of different hormones and enzymes that can affect function and even behavior.
 
 A more thorough explanation of this will be coming in a later update to the site.
+

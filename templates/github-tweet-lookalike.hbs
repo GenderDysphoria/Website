@@ -1,0 +1,27 @@
+<div class="tweet single {{className}}" style="{{style}}">
+  <div class="tweet-item" data-id="{{this}}">
+    <a class="tweet-header" href="https://github.com/{{githubUser}}" target="_blank">
+      <b><img src="{{githubUserImageLink}}" alt=""></b>
+      <strong>{{{githubUser}}}</strong>
+        <span>@{{githubUser}}</span>
+    <div class="tweet-logo">{{icon 'brands/github'}}</div>
+    </a>
+
+    <div class="tweet-text">
+      <a href="https://github.com/{{githubUser}}/status/">
+        
+      </a>
+
+        <span>{{introText}}</span>
+      <a href={{linkToDisplay}}>
+        {{linkText}}
+      </a>
+        <span>{{outroText}}</span>
+        {{#if html_i18n[page.lang]}}
+        <div class="tweet-text">{{{html_i18n[page.lang]}}}</div>
+        {{else}}
+        <div class="tweet-text">{{{html}}}</div>
+        {{/if}}
+    </div>
+</div>
+</div>

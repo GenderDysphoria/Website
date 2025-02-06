@@ -34,6 +34,10 @@ This is a compilation of reported medical transition changes collected from test
 
 **Note that this is a list of _possible_ changes. There is no guarantee that every person on masculinizing HRT will experience all of these. Your age, genetics, medical history, degree of feminization from natal puberty, and hormone regimen can all have impacts on results. There is also just a degree of randomness — every body is different — and some things can take years to appear.**
 
+{!{ <div class="gutter">
+{{import '~/github-tweet-lookalike' githubLink="swarmidentity" githubUser="swarmidentity" githubUserImageLink="https://avatars.githubusercontent.com/u/82755646?s=40&v=4" linkToDisplay='/transition-planner.html' introText="I built this " linkText="Transition Planning Calendar" outroText=" for myself, adding it as a beta page to the Dysphoria Bible. Contributions welcome!"}}
+</div> }!}
+
 ### Voice Drop
 
 Androgens cause the tissue that comprises the vocal cords to thicken and harden, permanently lowering the pitch of the voice. This is not a very fast change, but rather incremental over the first few years. Some people do not experience any voice change at all, it varies person to person. The change will not be drastic; if you are a soprano, you are not going to become a bass, but it could bring you down to a contralto or tenor.

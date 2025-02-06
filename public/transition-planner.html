@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Transition Planner</title>
+ <link type="text/css" href="http://mbostock.github.io/d3/style.css" rel="stylesheet" />
+<link type="text/css" href="/css/transition-planner.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
+<link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" /> 
+
+
+</head>
+<body class="markup grey-body">
+
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <script src="https://d3js.org/d3.v3.js"></script>
+
+    <nav class="w-100pc flex flex-column md-flex-row md-px-10 py-5 bg-black">
+        <div class="flex justify-between">
+            <a href="#" class="flex items-center p-2 mr-4 no-underline" onclick="location.reload();">
+                <img class="max-h-l2 w-auto" src="transition-planner/images/transgender-icon.png" />
+            </a>
+            <h3 class="white">Transition Planner</h3>
+            <a data-toggle="toggle-nav" data-target="#nav-items" href="#"
+                class="flex items-center ml-auto md-hidden indigo-lighter opacity-50 hover-opacity-100 ease-300 p-1 m-3">
+                <i data-feather="menu"></i>
+            </a>
+        </div>
+    </nav>
+   
+
+            <!-- Generate a Plan -->
+            <section id="home" class="p-10 md-p-l5 white-section">
+                <h1 class="fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">Get Started</h1>
+                <div class="flex flex-column md-flex-row mx-auto">
+                    <div id="mtfDiv" class="w-100pc md-w-40pc">
+                        <div class="br-8 p-5 m-5">
+                            <img class="w-l5" src="transition-planner/images/mtf.png" />
+                            <h4 class="indigo fw-600 fs-m3 mb-5">Generate New <span class="blue">Trans</span><span class="red">Fem</span> Plan</h4> 
+                                 
+                                  <!-- Trigger/Open The New MtF Modal -->
+                                
+                                    <div id="mtfModal" class="mtf-modal fw-600 opacity-100">
+                                        <div id="mtfQuestions" class="mtf-modal-content">
+                                        </div>
+                                        </div>
+                                        <button id="newMtFModalButton" class="trans-planner-label transfem-color">Generate New TransFem Plan</button>
+                            
+                                
+                        </div>
+                    </div>
+                    <div id="ftmDiv"  class="w-100pc md-w-40pc">
+                        <div class="br-8 p-5 m-5">
+                            <img class="w-l5" src="transition-planner/images/ftm.png" />
+                            <h4 class="indigo fw-600 fs-m3 mb-5">Generate New <span class="red">Trans</span><span class="blue">Masc</span> Plan</h4> 
+                            
+                                <!-- Trigger/Open The New FtM Modal -->
+                                <div id="ftmModal" class="ftm-modal fw-600 opacity-100">
+                                    <div id="ftmQuestions" class="ftm-modal-content">
+                                    </div>
+                                    </div>
+                                    <button id="newFtMModalButton" class="trans-planner-label transmasc-color">Generate New TransMasc Plan</button>
+                                
+                        </div>
+                    </div>
+                    <div class="w-100pc md-w-40pc">
+                        <div class="br-8 p-5 m-5">
+                            <img class="w-l5" src="transition-planner/images/indigo upload.png" />
+                            <h4 class="indigo fw-600 fs-m3 mb-5">Upload Existing Transition Plan</h4> 
+                             
+                            <label for="file" class="trans-planner-label trans-mixed-color">
+                                Upload Existing Plan
+                            </label>
+                            <input id="file" type="file" style="display:none" />
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="editAndDownload" class="p-10 md-p-l5 white-section" style="display: none;">
+                <h1 class="fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">Edit and Save</h1>
+                
+                <div class="flex flex-column md-flex-row mx-auto">
+                    <div class="w-100pc md-w-40pc">
+                        <div class="br-8 p-5 m-5">
+                            <img class="w-l5" src="transition-planner/images/edit calendar.png" />
+                            <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">Edit Plan</div>
+                            <!-- Trigger/Open The Edit Plan Modal -->
+                                <button id="editPlanModalButton"  class="trans-planner-label transfem-color">Edit Transition Plan</button>
+                                <div id="editPlanModal" class="edit-plan-modal">
+                                    <div class="edit-plan-modal-content">
+                                    <p>Make any plan changes, be sure to save your plan after!</p>
+                                    <button id="closeEditsNoSave"  class="trans-planner-label transfem-color">Close Without Saving</button>
+                                    <button id="finalizePlanEdits"  class="trans-planner-label transfem-color">Save Plan Changes</button>
+                                    <div id="planEditTable"></div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="w-100pc md-w-40pc">
+                        <div class="br-8 p-5 m-5">
+                            <img class="w-l5" src="transition-planner/images/indigo file download.png" />
+                            <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">Download Plan</div>
+
+                                <button  class="trans-planner-label transfem-color" onclick="downloadJSONFile()">Download My Plan</button>
+                                <a id="downloadAnchorElem" style="display: none;"></a>
+                        </div>
+                    </div>
+                    <div class="w-100pc md-w-40pc">
+                        <div class="br-8 p-5 m-5">
+                            <img class="w-l5" src="transition-planner/images/indigo image download.png" />
+                            <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">Download Image</div>
+        
+                                <button  class="trans-planner-label transfem-color" id="downloadPng">Download Image</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- hero section -->
+<section id="disclaimer" class="min-h-100h flex justify-start items-center white-section">
+    <div class="mx-5 md-mx-l5">
+        <div>
+            <h1 class="fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">Disclaimer</h1>
+
+            <div class="fs-s3 mt-3">
+                <div>
+                    <p>
+                        <b>I'M NOT A DOCTOR.</b> Talk to an actual medical professional for transition advice, this tool is only meant to help organize 
+                        the (seemingly) massive number of things that need to happen in order to start transitioning.
+                        Medical Timeline source information is <a href="https://www.gendergp.com/hrt-timelines-hormones-effects/">here</a>. A lot of the language used by medical professionals is pathologizing and negative, so I added the more positive terms and community-reported transition effects from the <a href="https://genderdysphoria.fyi/">Dysphoria Bible</a>.
+                        This site stores no personal information (which is why you should download the transition plan once you're done and re-upload if you wish to edit/review later).
+                        Use this planning tool at your own risk, please don't sue me.
+                    </p>
+
+                    <p>
+                        On a personal note: this sort of scheduling can be overwhelming, if you get stressed take a few deep breaths and just focus on one goal at a time. 
+                        From one trans person to another: <b>You Can Do This</b>. Transition is possible. Difficult, but possible (and SO worth it).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="disclaimer" class="min-h-100h flex justify-start items-center white-section">
+    <div class="mx-5 md-mx-l5">
+        <div>
+            <h1 class="fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">About</h1>
+
+            <div class="fs-s3 mt-3">
+                <div>
+                    <p>
+                        <br> Creative Commons Attribution (CC BY) license, SwarmIdentity (Louise Racette)
+
+                        <br>
+                        Questions? Comments? Something I missed? Hit me up at: 
+                        <br> swarmidentity@gmail.com
+                
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+            <div class="fw-600 fs-m3 mb-5 white-section" style="display: none;" id="zoomControl">
+    
+                <h1 class="fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">Transition Plan:</h1>
+                Start Date: <input type="date" id="graphStartDate"></input><br>
+                End Date: <input type="date" id="graphEndDate"></input><br>
+                <button  class="trans-planner-label transfem-color" id="setGraphStartEnd" onclick="renderGanttChart()">Zoom</button>
+            </div>
+            
+
+            <div id="ganttChartTarget" style="background-color:white;"></div>
+ 
+
+	<script type="text/javascript" src="/js/transition-planner/transition-planner.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/plan-obj-mtf.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/plan-obj-ftm.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/json-upload.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/gantt-chart-d3.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/saveSvgAsPng.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/generateMtFPlan.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/modal-newMtFPlan.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/generateFtMPlan.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/modal-newFtMPlan.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/modal-editPlan.js"></script>
+    
+    <script type="text/javascript" src="/js/transition-planner/json-download.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/json-to-table.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/json-from-table.js"></script>
+    <script type="text/javascript" src="/js/transition-planner/png-download.js"></script>
+    
+    
+
+</body>
+</html>
