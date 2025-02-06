@@ -102,7 +102,7 @@ Before that, dysphoria manifests in dozens of other, much subtler ways. [I wrote
 
 ### Consider The Null HypotheCis
 
-In mathematics, a [null hypothesis](https://en.wikipedia.org/wiki/Null_hypothesis) is something that is generally assumed to be true until it is proven false. It’s a default assumption, like “innocent until proven guilty.” If you’re going to convict someone of a murder, for example, circumstantial evidence just won’t do. You generally need overwhelming physical proof, or a confession, or some other obvious sign of guilt.
+In mathematics, a [null hypothesis](https://en.wikipedia.org/wiki/Null_hypothesis) is a theory assumed to be true to place a burden upon those trying to prove it false. It’s a default assumption, like “innocent until proven guilty.” If you’re going to convict someone of a murder, for example, circumstantial evidence just won’t do. You generally need overwhelming physical proof, or a confession, or some other obvious sign of guilt.
 
 [This excellent article by Natalie Reed](https://freethoughtblogs.com/nataliereed/2012/04/17/the-null-hypothecis/) argues that being cisgender (not trans) is treated as a null hypothesis by our society. We are all assumed to be our assigned gender at birth, and we feel as if we need overwhelming evidence to prove our transness. Otherwise, we continue to assume that we are cis.
 
